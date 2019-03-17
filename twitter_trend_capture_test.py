@@ -20,8 +20,8 @@ class TwitterTrendCapture(BaseCase):
 
         self.open("https://twitter.com/login?lang=en")
         if self.is_in_loginpage() :
-            self.update_text_value("input.js-username-field.email-input.js-initial-focus", "hazard.1989@gmail.com\n")
-            self.update_text_value("input.js-password-field", "9932795220")
+            self.update_text_value("input.js-username-field.email-input.js-initial-focus", "")
+            self.update_text_value("input.js-password-field", "")
             self.slow_click("button.submit.EdgeButton.EdgeButton--primary.EdgeButtom--medium")
 
         all_spans = self.driver.find_elements_by_xpath("//span[@class='u-linkComplex-target trend-name']")
